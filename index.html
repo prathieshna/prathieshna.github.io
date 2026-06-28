@@ -3,22 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Prathieshna Vekneswaran — Android Developer</title>
-  <meta name="description" content="Android apps by Prathieshna Vekneswaran. Book Finder and Tax Genie on Google Play." />
+  <title>Prathieshna Vekneswaran — Android Developer &amp; Freelancer</title>
+  <meta name="description" content="Independent Android developer in Sri Lanka. Native Kotlin apps, clean architecture, Google Play published. Available for freelance mobile development work." />
+  <meta property="og:title" content="Prathieshna Vekneswaran — Android Developer" />
+  <meta property="og:description" content="Native Kotlin Android apps. Available for freelance work." />
+  <meta property="og:type" content="website" />
+
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0f0f13;
-      --surface: #1a1a22;
-      --surface2: #22222e;
-      --border: #2e2e3e;
-      --accent: #7c6af7;
-      --accent2: #4fd9c4;
-      --text: #e8e8f0;
-      --text-muted: #8888a8;
-      --bookfinder: #e8a44a;
-      --taxgenie: #4abeea;
+      --bg:          #0b0b10;
+      --surface:     #14141c;
+      --surface2:    #1c1c28;
+      --surface3:    #22222e;
+      --border:      #2a2a3a;
+      --border2:     #32324a;
+      --accent:      #7c6af7;
+      --accent-dim:  #7c6af722;
+      --accent2:     #4fd9c4;
+      --accent2-dim: #4fd9c422;
+      --gold:        #e8a44a;
+      --gold-dim:    #e8a44a22;
+      --cyan:        #4abeea;
+      --cyan-dim:    #4abeea22;
+      --text:        #e4e4f0;
+      --text-muted:  #7878a0;
+      --text-soft:   #a0a0c0;
+      --radius:      14px;
     }
 
     html { scroll-behavior: smooth; }
@@ -26,74 +38,375 @@
     body {
       background: var(--bg);
       color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
       line-height: 1.6;
-      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
     }
 
-    /* ── Hero ── */
-    .hero {
-      max-width: 860px;
+    a { color: inherit; text-decoration: none; }
+
+    /* ════════════════════════════
+       NAV
+    ════════════════════════════ */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11,11,16,0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 72px 24px 56px;
-      text-align: center;
+      padding: 0 24px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-logo {
+      font-weight: 700;
+      font-size: 1rem;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-logo span { color: var(--accent2); }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    .nav-cta {
+      background: var(--accent);
+      color: #fff !important;
+      padding: 7px 16px;
+      border-radius: 8px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      transition: opacity 0.15s !important;
+    }
+
+    .nav-cta:hover { opacity: 0.85; }
+
+    @media (max-width: 640px) {
+      .nav-links li:not(:last-child) { display: none; }
+    }
+
+    /* ════════════════════════════
+       HERO
+    ════════════════════════════ */
+    .hero {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 96px 24px 80px;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 48px;
+      align-items: center;
+    }
+
+    @media (max-width: 720px) {
+      .hero { grid-template-columns: 1fr; padding: 64px 24px 56px; }
+      .hero-visual { display: none; }
     }
 
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: var(--surface);
-      border: 1px solid var(--border);
+      background: var(--accent2-dim);
+      border: 1px solid #4fd9c433;
       border-radius: 999px;
-      padding: 6px 16px;
-      font-size: 13px;
-      color: var(--text-muted);
-      margin-bottom: 28px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--accent2);
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
     }
 
-    .hero-badge span { color: var(--accent2); font-weight: 600; }
+    .hero-badge::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: var(--accent2);
+      border-radius: 50%;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
 
     .hero h1 {
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 700;
-      letter-spacing: -0.02em;
-      line-height: 1.15;
-      margin-bottom: 16px;
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 20px;
     }
 
-    .hero h1 em {
-      font-style: normal;
+    .hero h1 .highlight {
       background: linear-gradient(135deg, var(--accent), var(--accent2));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
-    .hero p {
+    .hero-sub {
       font-size: 1.1rem;
+      color: var(--text-soft);
+      max-width: 480px;
+      margin-bottom: 36px;
+      line-height: 1.7;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: transform 0.15s, opacity 0.15s, box-shadow 0.15s;
+      cursor: pointer;
+    }
+
+    .btn:hover { transform: translateY(-2px); }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), #6055d8);
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(124,106,247,0.35);
+    }
+
+    .btn-primary:hover { box-shadow: 0 8px 32px rgba(124,106,247,0.45); }
+
+    .btn-secondary {
+      background: var(--surface2);
+      color: var(--text);
+      border: 1px solid var(--border2);
+    }
+
+    .btn-secondary:hover { background: var(--surface3); }
+
+    /* hero visual */
+    .hero-visual {
+      position: relative;
+      width: 220px;
+      height: 220px;
+      flex-shrink: 0;
+    }
+
+    .hero-visual-ring {
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 1px solid var(--border2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero-visual-inner {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent-dim), var(--accent2-dim));
+      border: 1px solid var(--border2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+    }
+
+    .hero-orbit {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 220px;
+      height: 220px;
+      animation: orbit 8s linear infinite;
+    }
+
+    .hero-orbit-dot {
+      position: absolute;
+      top: -5px; left: 50%;
+      transform: translateX(-50%);
+      width: 10px; height: 10px;
+      background: var(--accent2);
+      border-radius: 50%;
+      box-shadow: 0 0 10px var(--accent2);
+    }
+
+    @keyframes orbit { from { transform: translate(-50%,-50%) rotate(0deg); } to { transform: translate(-50%,-50%) rotate(360deg); } }
+
+    /* ════════════════════════════
+       SECTION SHARED
+    ════════════════════════════ */
+    section { padding: 80px 24px; }
+
+    .section-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+
+    .section-desc {
+      font-size: 1rem;
       color: var(--text-muted);
-      max-width: 520px;
-      margin: 0 auto;
+      max-width: 540px;
+      line-height: 1.7;
     }
 
-    /* ── Apps section ── */
-    .apps {
-      max-width: 960px;
+    .section-head { margin-bottom: 48px; }
+
+    /* ════════════════════════════
+       STACK
+    ════════════════════════════ */
+    #stack { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); padding: 40px 24px; }
+
+    .stack-inner {
+      max-width: 1080px;
       margin: 0 auto;
-      padding: 0 24px 80px;
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+
+    .stack-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .stack-tags {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      background: var(--surface3);
+      border: 1px solid var(--border2);
+      border-radius: 8px;
+      padding: 6px 14px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--text-soft);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .tag-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+    }
+
+    /* ════════════════════════════
+       SERVICES
+    ════════════════════════════ */
+    #services { background: var(--bg); }
+
+    .services-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-      gap: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
 
-    @media (max-width: 500px) {
-      .apps { grid-template-columns: 1fr; }
-    }
-
-    /* ── App Card ── */
-    .card {
+    .service-card {
       background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+
+    .service-card:hover {
+      border-color: var(--border2);
+      transform: translateY(-2px);
+    }
+
+    .service-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .service-card h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* ════════════════════════════
+       PORTFOLIO / APPS
+    ════════════════════════════ */
+    #portfolio { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+
+    .apps-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+      gap: 24px;
+    }
+
+    @media (max-width: 520px) {
+      .apps-grid { grid-template-columns: 1fr; }
+    }
+
+    .app-card {
+      background: var(--bg);
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 32px;
@@ -103,47 +416,39 @@
       transition: transform 0.2s, box-shadow 0.2s;
     }
 
-    .card:hover {
+    .app-card:hover {
       transform: translateY(-3px);
-      box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+      box-shadow: 0 20px 56px rgba(0,0,0,0.45);
     }
 
-    .card-header {
+    .app-card-header {
       display: flex;
       align-items: center;
       gap: 16px;
     }
 
-    .app-icon {
-      width: 64px;
-      height: 64px;
+    .app-icon-wrap {
+      width: 60px; height: 60px;
       border-radius: 16px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 32px;
+      font-size: 28px;
+      display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
     }
 
-    .card--bookfinder .app-icon { background: linear-gradient(135deg, #e8a44a22, #e8a44a44); border: 1px solid #e8a44a44; }
-    .card--taxgenie   .app-icon { background: linear-gradient(135deg, #4abeea22, #4abeea44); border: 1px solid #4abeea44; }
+    .app-card--bf .app-icon-wrap { background: var(--gold-dim); border: 1px solid #e8a44a33; }
+    .app-card--tg .app-icon-wrap { background: var(--cyan-dim); border: 1px solid #4abeea33; }
 
-    .card-title-block h2 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      letter-spacing: -0.01em;
-    }
+    .app-title { font-size: 1.15rem; font-weight: 700; letter-spacing: -0.01em; }
+    .app-card--bf .app-title { color: var(--gold); }
+    .app-card--tg .app-title { color: var(--cyan); }
 
-    .card--bookfinder .card-title-block h2 { color: var(--bookfinder); }
-    .card--taxgenie   .card-title-block h2 { color: var(--taxgenie); }
-
-    .version-tag {
+    .app-meta {
       font-size: 11px;
       font-weight: 600;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
       color: var(--text-muted);
-      background: var(--surface2);
+      background: var(--surface);
       border: 1px solid var(--border);
       border-radius: 4px;
       padding: 2px 7px;
@@ -151,73 +456,65 @@
       display: inline-block;
     }
 
-    .card-desc {
-      font-size: 0.95rem;
+    .app-desc {
+      font-size: 0.9rem;
       color: var(--text-muted);
-      line-height: 1.65;
+      line-height: 1.7;
     }
 
-    /* ── Feature list ── */
-    .features {
+    .app-features {
       list-style: none;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 7px;
     }
 
-    .features li {
+    .app-features li {
+      font-size: 0.875rem;
+      color: var(--text-soft);
       display: flex;
       align-items: flex-start;
-      gap: 10px;
-      font-size: 0.9rem;
-      color: var(--text);
+      gap: 9px;
     }
 
-    .features li::before {
-      content: "✓";
-      font-size: 11px;
-      font-weight: 700;
-      width: 18px;
-      height: 18px;
+    .feat-check {
+      width: 17px; height: 17px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      font-size: 9px;
+      font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
       flex-shrink: 0;
       margin-top: 2px;
     }
 
-    .card--bookfinder .features li::before { background: #e8a44a22; color: var(--bookfinder); border: 1px solid #e8a44a44; }
-    .card--taxgenie   .features li::before { background: #4abeea22; color: var(--taxgenie);   border: 1px solid #4abeea44; }
+    .app-card--bf .feat-check { background: var(--gold-dim); color: var(--gold); border: 1px solid #e8a44a33; }
+    .app-card--tg .feat-check { background: var(--cyan-dim); color: var(--cyan); border: 1px solid #4abeea33; }
 
-    /* ── CTA ── */
-    .card-cta {
+    .app-cta {
       margin-top: auto;
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 14px;
     }
 
-    .btn-play {
+    .btn-store {
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      text-decoration: none;
-      border-radius: 10px;
       padding: 10px 18px;
-      font-size: 0.88rem;
-      font-weight: 600;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 700;
       transition: opacity 0.15s, transform 0.15s;
     }
 
-    .btn-play:hover { opacity: 0.85; transform: translateY(-1px); }
+    .btn-store:hover { opacity: 0.85; transform: translateY(-1px); }
+    .btn-store svg { width: 15px; height: 15px; }
 
-    .card--bookfinder .btn-play { background: linear-gradient(135deg, #e8a44a, #d4832e); color: #000; }
-    .card--taxgenie   .btn-play { background: linear-gradient(135deg, #4abeea, #2896c8); color: #000; }
+    .app-card--bf .btn-store { background: linear-gradient(135deg, var(--gold), #c8721a); color: #000; }
+    .app-card--tg .btn-store { background: linear-gradient(135deg, var(--cyan), #1a8ab4); color: #000; }
 
-    .btn-play svg { width: 16px; height: 16px; }
-
-    .platform-tag {
+    .free-tag {
       font-size: 11px;
       color: var(--text-muted);
       display: flex;
@@ -225,123 +522,338 @@
       gap: 5px;
     }
 
-    /* ── Divider ── */
-    .divider {
-      width: 48px;
-      height: 3px;
-      border-radius: 2px;
-      margin: 0 auto 12px;
-    }
-
-    .card--bookfinder .divider { background: var(--bookfinder); }
-    .card--taxgenie   .divider { background: var(--taxgenie); }
-
-    /* ── Footer ── */
-    footer {
-      text-align: center;
-      padding: 32px 24px;
+    /* ════════════════════════════
+       HIRE / CTA BAND
+    ════════════════════════════ */
+    #hire {
+      background: linear-gradient(135deg, #12102a, #0e1a1e);
       border-top: 1px solid var(--border);
-      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+      padding: 96px 24px;
+    }
+
+    #hire .section-label { justify-content: center; }
+
+    #hire .section-title { margin: 0 auto 16px; }
+
+    #hire .section-desc {
+      margin: 0 auto 40px;
+      font-size: 1.05rem;
+    }
+
+    #hire .hire-actions {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn-linkedin {
+      background: #0a66c2;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(10,102,194,0.4);
+    }
+
+    .btn-linkedin:hover { box-shadow: 0 8px 32px rgba(10,102,194,0.5); }
+
+    .btn-github {
+      background: var(--surface2);
+      color: var(--text);
+      border: 1px solid var(--border2);
+    }
+
+    .btn-github:hover { background: var(--surface3); }
+
+    /* ════════════════════════════
+       FOOTER
+    ════════════════════════════ */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      padding: 40px 24px;
+    }
+
+    .footer-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .footer-logo {
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .footer-logo span { color: var(--accent2); }
+
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
       font-size: 0.85rem;
+      color: var(--text-muted);
+      transition: color 0.15s;
     }
 
-    footer a {
-      color: var(--accent);
-      text-decoration: none;
+    .footer-links a:hover { color: var(--text); }
+
+    .footer-copy {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      width: 100%;
+      text-align: center;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      margin-top: 16px;
     }
 
-    footer a:hover { text-decoration: underline; }
+    /* ════════════════════════════
+       ICONS (inline SVG helpers)
+    ════════════════════════════ */
+    .icon-play { display: inline-block; }
   </style>
 </head>
 <body>
 
-  <section class="hero">
-    <div class="hero-badge">
-      <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><circle cx="6" cy="6" r="5" stroke="#4fd9c4" stroke-width="1.5"/><circle cx="6" cy="6" r="2" fill="#4fd9c4"/></svg>
-      <span>Android Developer</span> · Sri Lanka
+  <!-- ── NAV ── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">Prathieshna<span>.</span></a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#hire">Contact</a></li>
+        <li>
+          <a class="nav-cta btn" href="#hire">Hire Me</a>
+        </li>
+      </ul>
     </div>
-    <h1>Apps by<br /><em>Prathieshna Vekneswaran</em></h1>
-    <p>Building useful Android apps. Available on Google Play, free to use.</p>
-  </section>
+  </nav>
 
-  <section class="apps">
-
-    <!-- ── Book Finder ── -->
-    <article class="card card--bookfinder">
-      <div class="card-header">
-        <div class="app-icon">📚</div>
-        <div class="card-title-block">
-          <h2>Book Finder</h2>
-          <span class="version-tag">v1.7 · Android</span>
+  <!-- ── HERO ── -->
+  <div style="max-width:1080px;margin:0 auto;padding:0 24px;">
+    <div class="hero" style="padding-left:0;padding-right:0;">
+      <div class="hero-text">
+        <div class="hero-badge">Available for freelance work</div>
+        <h1>Native Android<br />Developer<br /><span class="highlight">for Hire</span></h1>
+        <p class="hero-sub">
+          I build high-performance native Android apps in Kotlin — from concept to Google Play.
+          Based in Sri Lanka, working with clients worldwide.
+        </p>
+        <div class="hero-actions">
+          <a href="#hire" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            Get in Touch
+          </a>
+          <a href="#portfolio" class="btn btn-secondary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            View My Apps
+          </a>
         </div>
       </div>
-      <div class="divider"></div>
-      <p class="card-desc">
-        Search millions of books using Google Books &amp; Open Library APIs. Get cover art,
-        descriptions, ratings, community reading stats, and publisher metadata — all in one place.
-      </p>
-      <ul class="features">
-        <li>Search books by title, author, or ISBN</li>
-        <li>Full &amp; partial preview support</li>
-        <li>Save favourites for offline browsing</li>
-        <li>Community ratings &amp; reading status via Open Library</li>
-        <li>Publisher, page count, categories &amp; ISBN details</li>
-        <li>Read reviews on Google Books &amp; Open Library</li>
-      </ul>
-      <div class="card-cta">
-        <a class="btn-play" href="https://play.google.com/store/apps/details?id=lk.prathieshna.bookfinder" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.37.2.8.2 1.17 0L16.77 12 4.35.24c-.37-.2-.8-.2-1.17 0A1.3 1.3 0 0 0 2.5 1.38v21.24c0 .53.28 1.01.68 1.14z"/><path d="M20.82 10.35l-3.04-1.76L14.8 12l2.98 3.41 3.04-1.76a1.5 1.5 0 0 0 0-2.65.4.4 0 0 0-.01-.65z"/><path d="M4.35 23.76 14.8 12 4.35.24 3.18.9v22.2l1.17.66z" opacity=".5"/></svg>
-          Get on Google Play
-        </a>
-        <span class="platform-tag">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
-          Free · Ad supported
-        </span>
-      </div>
-    </article>
-
-    <!-- ── Tax Genie ── -->
-    <article class="card card--taxgenie">
-      <div class="card-header">
-        <div class="app-icon">🧾</div>
-        <div class="card-title-block">
-          <h2>Tax Genie</h2>
-          <span class="version-tag">Sri Lanka · Android</span>
+      <div class="hero-visual">
+        <div class="hero-visual-ring">
+          <div class="hero-visual-inner">🤖</div>
+          <div class="hero-orbit"><div class="hero-orbit-dot"></div></div>
         </div>
       </div>
-      <div class="divider"></div>
-      <p class="card-desc">
-        A step-by-step Sri Lankan personal income tax estimator. Answer a few plain-English
-        questions about your income and get a full line-by-line tax breakdown — across
-        every rate regime since 2018.
-      </p>
-      <ul class="features">
-        <li>Covers all Y/A regimes: 2018 → 2025/26</li>
-        <li>Wizard-style Q&amp;A — no tax jargon needed</li>
-        <li>Full progressive-tax breakdown, line by line</li>
-        <li>Residency-based relief &amp; qualifying-payment deductions</li>
-        <li>Handles rate changes across 5 different tax eras</li>
-        <li>Estimator only — clear disclaimer on every result</li>
-      </ul>
-      <div class="card-cta">
-        <a class="btn-play" href="https://play.google.com/store/apps/details?id=lk.prathieshna.taxgenie" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.37.2.8.2 1.17 0L16.77 12 4.35.24c-.37-.2-.8-.2-1.17 0A1.3 1.3 0 0 0 2.5 1.38v21.24c0 .53.28 1.01.68 1.14z"/><path d="M20.82 10.35l-3.04-1.76L14.8 12l2.98 3.41 3.04-1.76a1.5 1.5 0 0 0 0-2.65.4.4 0 0 0-.01-.65z"/><path d="M4.35 23.76 14.8 12 4.35.24 3.18.9v22.2l1.17.66z" opacity=".5"/></svg>
-          Get on Google Play
-        </a>
-        <span class="platform-tag">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
-          Free · Ad supported
-        </span>
-      </div>
-    </article>
+    </div>
+  </div>
 
+  <!-- ── STACK ── -->
+  <div id="stack">
+    <div class="stack-inner">
+      <span class="stack-label">Tech Stack</span>
+      <div class="stack-tags">
+        <span class="tag"><span class="tag-dot" style="background:#7f52ff"></span>Kotlin</span>
+        <span class="tag"><span class="tag-dot" style="background:#f89820"></span>Java</span>
+        <span class="tag"><span class="tag-dot" style="background:#4285f4"></span>Jetpack Compose</span>
+        <span class="tag"><span class="tag-dot" style="background:#4fd9c4"></span>Android SDK</span>
+        <span class="tag"><span class="tag-dot" style="background:#e8a44a"></span>MVVM / Clean Arch</span>
+        <span class="tag"><span class="tag-dot" style="background:#e44d26"></span>REST APIs</span>
+        <span class="tag"><span class="tag-dot" style="background:#4abeea"></span>Google Play</span>
+        <span class="tag"><span class="tag-dot" style="background:#ea4335"></span>AdMob</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── SERVICES ── -->
+  <section id="services">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-label">What I Do</div>
+        <h2 class="section-title">Mobile Development<br />Services</h2>
+        <p class="section-desc">
+          Need an Android app built properly? I handle the full stack —
+          architecture, UI, APIs, and Play Store deployment.
+        </p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <span class="service-icon">📱</span>
+          <h3>Android App Development</h3>
+          <p>End-to-end native Android apps in Kotlin. From wireframe to a published app on Google Play — built clean, fast, and maintainable.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-icon">🏗️</span>
+          <h3>Clean Architecture &amp; MVVM</h3>
+          <p>Scalable app architecture using MVVM, Repository pattern, and Jetpack components. Code that's easy to test, extend, and hand off.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-icon">🔌</span>
+          <h3>API &amp; Backend Integration</h3>
+          <p>REST API integration with Retrofit, OkHttp, and Kotlin coroutines. Third-party SDKs, OAuth flows, and real-time data handling.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-icon">🎨</span>
+          <h3>Jetpack Compose UI</h3>
+          <p>Modern declarative UIs with Jetpack Compose. Smooth animations, custom components, edge-to-edge layouts, and Material Design 3.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-icon">🔄</span>
+          <h3>App Maintenance &amp; Updates</h3>
+          <p>Keep existing Android apps up to date — SDK upgrades, bug fixes, Play Store compliance, and feature additions on existing codebases.</p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-icon">💡</span>
+          <h3>Technical Consulting</h3>
+          <p>Architecture reviews, code audits, or just a second opinion on your mobile strategy. Hourly or project-based engagements.</p>
+        </div>
+
+      </div>
+    </div>
   </section>
 
+  <!-- ── PORTFOLIO ── -->
+  <section id="portfolio">
+    <div class="section-inner">
+      <div class="section-head">
+        <div class="section-label">Published Apps</div>
+        <h2 class="section-title">Live on Google Play</h2>
+        <p class="section-desc">
+          Apps I've built and shipped — real users, real Play Store, production-grade code.
+        </p>
+      </div>
+      <div class="apps-grid">
+
+        <!-- Book Finder -->
+        <article class="app-card app-card--bf">
+          <div class="app-card-header">
+            <div class="app-icon-wrap">📚</div>
+            <div>
+              <div class="app-title">Book Finder</div>
+              <span class="app-meta">v1.7 · Android</span>
+            </div>
+          </div>
+          <p class="app-desc">
+            Search millions of books via Google Books &amp; Open Library APIs.
+            Covers, ratings, community reading stats, publisher metadata, and
+            preview support — all in one app.
+          </p>
+          <ul class="app-features">
+            <li><span class="feat-check">✓</span>Search by title, author, or ISBN</li>
+            <li><span class="feat-check">✓</span>Full &amp; partial book preview</li>
+            <li><span class="feat-check">✓</span>Save &amp; manage favourites</li>
+            <li><span class="feat-check">✓</span>Open Library community ratings</li>
+            <li><span class="feat-check">✓</span>Publisher, page count, ISBN details</li>
+            <li><span class="feat-check">✓</span>Edge-to-edge, targets API 36</li>
+          </ul>
+          <div class="app-cta">
+            <a class="btn-store" href="https://play.google.com/store/apps/details?id=lk.prathieshna.bookfinder" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.37.2.8.2 1.17 0L16.77 12 4.35.24c-.37-.2-.8-.2-1.17 0A1.3 1.3 0 0 0 2.5 1.38v21.24c0 .53.28 1.01.68 1.14z"/><path d="M20.82 10.35l-3.04-1.76L14.8 12l2.98 3.41 3.04-1.76a1.5 1.5 0 0 0 0-2.65z"/></svg>
+              Google Play
+            </a>
+            <span class="free-tag">Free · Ad supported</span>
+          </div>
+        </article>
+
+        <!-- Tax Genie -->
+        <article class="app-card app-card--tg">
+          <div class="app-card-header">
+            <div class="app-icon-wrap">🧾</div>
+            <div>
+              <div class="app-title">Tax Genie</div>
+              <span class="app-meta">Sri Lanka · Android</span>
+            </div>
+          </div>
+          <p class="app-desc">
+            Step-by-step Sri Lankan personal income tax estimator. Answer plain-English
+            questions about your income, get a full line-by-line breakdown across every
+            tax regime since 2018.
+          </p>
+          <ul class="app-features">
+            <li><span class="feat-check">✓</span>All Y/A regimes: 2018 → 2025/26</li>
+            <li><span class="feat-check">✓</span>Wizard Q&amp;A — no tax jargon</li>
+            <li><span class="feat-check">✓</span>Progressive tax breakdown, line by line</li>
+            <li><span class="feat-check">✓</span>Residency relief &amp; qualifying deductions</li>
+            <li><span class="feat-check">✓</span>Handles 5 different tax regimes correctly</li>
+            <li><span class="feat-check">✓</span>Jetpack Compose · MVVM · Hilt</li>
+          </ul>
+          <div class="app-cta">
+            <a class="btn-store" href="https://play.google.com/store/apps/details?id=lk.prathieshna.taxgenie" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.18 23.76c.37.2.8.2 1.17 0L16.77 12 4.35.24c-.37-.2-.8-.2-1.17 0A1.3 1.3 0 0 0 2.5 1.38v21.24c0 .53.28 1.01.68 1.14z"/><path d="M20.82 10.35l-3.04-1.76L14.8 12l2.98 3.41 3.04-1.76a1.5 1.5 0 0 0 0-2.65z"/></svg>
+              Google Play
+            </a>
+            <span class="free-tag">Free · Ad supported</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HIRE CTA ── -->
+  <section id="hire">
+    <div class="section-inner">
+      <div class="section-label" style="text-align:center">Let's Work Together</div>
+      <h2 class="section-title" style="text-align:center;max-width:640px;margin:0 auto 16px;">
+        Need Mobile Development Work Done?
+      </h2>
+      <p class="section-desc" style="text-align:center;margin:0 auto 40px;">
+        Whether you need a new Android app built from scratch, an existing app improved,
+        or technical advice on your mobile product — reach out. I'm available for freelance
+        and contract engagements.
+      </p>
+      <div class="hire-actions">
+        <a class="btn btn-linkedin" href="https://www.linkedin.com/services/page/054211314532055813" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          View LinkedIn Services
+        </a>
+        <a class="btn btn-github" href="https://github.com/prathieshna" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GitHub Profile
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
   <footer>
-    <p>
-      &copy; 2026 Prathieshna Vekneswaran ·
-      <a href="/tax-genie-privacy-policy.html">Privacy Policy</a>
-    </p>
+    <div class="footer-inner">
+      <div class="footer-logo">Prathieshna Vekneswaran<span>.</span></div>
+      <ul class="footer-links">
+        <li><a href="https://www.linkedin.com/services/page/054211314532055813" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://github.com/prathieshna" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://play.google.com/store/apps/developer?id=Prathieshna+Vekneswaran" target="_blank" rel="noopener">Google Play</a></li>
+        <li><a href="/tax-genie-privacy-policy.html">Privacy Policy</a></li>
+      </ul>
+      <p class="footer-copy">&copy; 2026 Prathieshna Vekneswaran · Android Developer · Sri Lanka</p>
+    </div>
   </footer>
 
 </body>
