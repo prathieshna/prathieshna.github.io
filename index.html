@@ -24,6 +24,7 @@
       --acc2:    #4fd9c4;
       --gold:    #e8a44a;
       --cyan:    #4abeea;
+      --ember:   #ff5a1f;
       --txt:     #e0e0f0;
       --soft:    #9090b8;
       --muted:   #50507a;
@@ -409,7 +410,7 @@
     #portfolio { background: var(--bg); }
 
     .port-grid {
-      display: grid; grid-template-columns: repeat(2,1fr); gap: 24px;
+      display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,320px),1fr)); gap: 24px;
     }
 
     @media(max-width:720px){ .port-grid{ grid-template-columns: 1fr; } }
@@ -441,11 +442,13 @@
     }
 
     .app-bf .app-icon { background: rgba(232,164,74,.12); border: 1px solid rgba(232,164,74,.25); }
+    .app-lc .app-icon { background: rgba(255,90,31,.12); border: 1px solid rgba(255,90,31,.28); }
     .app-tg .app-icon { background: rgba(74,190,234,.12); border: 1px solid rgba(74,190,234,.25); }
 
     .app-name { font-size: 1.1rem; font-weight: 700; }
     .app-bf .app-name { color: var(--gold); }
     .app-tg .app-name { color: var(--cyan); }
+    .app-lc .app-name { color: var(--ember); }
 
     .app-platform { font-size: 11px; color: var(--muted); font-weight: 600; text-transform: uppercase; letter-spacing: .07em; margin-top: 2px; }
 
@@ -461,6 +464,7 @@
     }
 
     .app-bf .tick { background: rgba(232,164,74,.15); color: var(--gold); border: 1px solid rgba(232,164,74,.3); }
+    .app-lc .tick { background: rgba(255,90,31,.15); color: var(--ember); border: 1px solid rgba(255,90,31,.32); }
     .app-tg .tick { background: rgba(74,190,234,.15); color: var(--cyan); border: 1px solid rgba(74,190,234,.3); }
 
     .app-cta { margin-top: auto; display: flex; align-items: center; gap: 14px; }
@@ -476,6 +480,7 @@
     .play-btn svg { width: 13px; height: 13px; }
 
     .app-bf .play-btn { background: linear-gradient(135deg, var(--gold), #c07818); color: #0a0a0a; }
+    .app-lc .play-btn { background: linear-gradient(135deg, var(--ember), #c43a05); color: #0a0a0a; }
     .app-tg .play-btn { background: linear-gradient(135deg, var(--cyan), #1880aa); color: #0a0a0a; }
 
     .app-free { font-size: 11px; color: var(--muted); }
@@ -926,7 +931,7 @@
 <section id="portfolio">
   <div class="sec">
     <div class="eyebrow rev">Published Apps</div>
-    <h2 class="sec-title rev d1">Live on Google Play</h2>
+    <h2 class="sec-title rev d1">On Google Play, and on the way</h2>
     <p class="sec-sub rev d2">Apps I've built and shipped — real users, production-grade code.</p>
     <div class="port-grid">
 
@@ -977,6 +982,28 @@
             Google Play
           </a>
           <span class="app-free">Free · Ad supported</span>
+        </div>
+      </article>
+
+      <article class="app-card app-lc rev d3">
+        <div class="app-head">
+          <div class="app-icon">📺</div>
+          <div>
+            <div class="app-name">LocalCast</div>
+            <div class="app-platform">Android &amp; Android TV · Coming to Google Play</div>
+          </div>
+        </div>
+        <p class="app-desc">Turn any TV into a sign from your phone. Slides, timers, a teleprompter and a queue board, sent over your own Wi-Fi with no cloud and no accounts.</p>
+        <ul class="app-feats">
+          <li><span class="tick">✓</span>Text, photo and video slides on the TV</li>
+          <li><span class="tick">✓</span>Countdown timer and live announcements</li>
+          <li><span class="tick">✓</span>Teleprompter and counter queue board</li>
+          <li><span class="tick">✓</span>Encrypted, local-only pairing with a passcode</li>
+          <li><span class="tick">✓</span>Free to start · Pro is a one-time $1.49</li>
+        </ul>
+        <div class="app-cta">
+          <a class="play-btn" href="/localcast/">Visit LocalCast &rarr;</a>
+          <a class="app-free" href="/localcast/privacy.html">Privacy policy</a>
         </div>
       </article>
 
@@ -1239,6 +1266,7 @@
           <h4>Legal</h4>
           <ul>
             <li><a href="/tax-genie-privacy-policy.html">Tax Genie Privacy Policy</a></li>
+            <li><a href="/localcast/privacy.html">LocalCast Privacy Policy</a></li>
           </ul>
         </div>
 
