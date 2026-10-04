@@ -14,7 +14,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/img/prathieshna.webp" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0&icon_names=android,api,architecture,arrow_outward,build,calculate,code,design_services,devices,groups,handyman,lightbulb,location_on,mail,menu_book,play_arrow,rocket_launch,schedule,school,tv,verified,workspace_premium&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,1,0&icon_names=android,api,architecture,arrow_outward,build,calculate,code,design_services,devices,groups,handyman,lightbulb,location_on,mail,menu_book,play_arrow,rocket_launch,schedule,school,shield,tv,verified,workspace_premium&display=block" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Prathieshna Vekneswaran","jobTitle":"Mobile Technical Lead","url":"https://prathieshna.github.io/","sameAs":["https://github.com/prathieshna","https://www.linkedin.com/in/prathieshna"],"address":{"@type":"PostalAddress","addressLocality":"Dehiwala","addressCountry":"LK"},"alumniOf":"University of Westminster","knowsAbout":["Android","Kotlin","Jetpack Compose","Flutter","React Native"]}
@@ -167,6 +167,15 @@ h2{font-weight:700;font-size:clamp(34px,4.6vw,60px);line-height:1.04;letter-spac
 .devices .tv{position:absolute;left:0;top:6%;width:84%;border-radius:18px;border:6px solid #14161a;box-shadow:0 30px 50px -24px rgba(0,0,0,.45)}
 .devices .ph{position:absolute;right:0;bottom:0;width:30%;border-radius:20px;border:4px solid #14161a;box-shadow:0 26px 40px -18px rgba(0,0,0,.5);transition:transform .6s var(--spring)}
 .proj:hover .devices .ph{transform:translateY(-8px) rotate(-2deg)}
+.proj.big.blue{background:var(--blue-c);color:var(--blue-on)}
+.proj.blue .soon{color:var(--blue)}
+.proj.blue .ico{color:#fff}
+.devices.duo{aspect-ratio:1.18}
+.devices.duo .ph{width:38%}
+.devices.duo .ph.p1{left:6%;right:auto;bottom:0}
+.devices.duo .ph.p2{right:6%;bottom:auto;top:0}
+.proj:hover .devices.duo .ph.p1{transform:translateY(-8px) rotate(-2deg)}
+.proj:hover .devices.duo .ph.p2{transform:translateY(-8px) rotate(2deg)}
 @media(max-width:900px){.proj.big{grid-template-columns:1fr}.proj.half{grid-column:span 6}}
 
 /* tools */
@@ -311,7 +320,7 @@ footer a{text-decoration:none}footer a:hover{color:var(--on);text-decoration:und
   <div class="wrap">
     <p class="eyebrow rv">Selected work</p>
     <h2 class="rv">Products I designed, built and shipped.</h2>
-    <p class="sub rv">Three apps I own end to end, from the first commit to the store listing.</p>
+    <p class="sub rv">Four apps I own end to end, from the first commit to the store listing.</p>
     <div class="work">
 
       <article class="proj big rv">
@@ -327,6 +336,22 @@ footer a{text-decoration:none}footer a:hover{color:var(--on);text-decoration:und
         <div class="devices">
           <img class="tv" src="assets/img/localcast-tv.webp" width="960" height="540" alt="LocalCast now-serving queue board on a TV" loading="lazy">
           <img class="ph" src="assets/img/localcast-slides.webp" width="540" height="1170" alt="LocalCast phone app listing the slides on the TV" loading="lazy">
+        </div>
+      </article>
+
+      <article class="proj big blue rv" style="--d:.03s">
+        <svg class="bgshape" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-squircle"/></svg>
+        <div>
+          <span class="ico"><svg viewBox="0 0 100 100" style="color:var(--blue)"><use href="#s-flower"/></svg><span class="ms">shield</span></span>
+          <h3>ProvoLog</h3>
+          <p class="plat">Android<span class="soon">Coming to Google Play</span></p>
+          <p class="d">Private field notes with photos, voice and GPS. Everything is encrypted on the phone, voice notes are transcribed on-device, and photos can be signed with Content Credentials so later edits show. No account, no cloud, no server.</p>
+          <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Room + SQLCipher</li><li>C2PA</li><li>On-device ML</li><li>Play Billing</li></ul>
+          <div class="links"><a href="/provolog/">Visit the site<span class="ms">arrow_outward</span></a><a href="/provolog/privacy.html">Privacy policy</a></div>
+        </div>
+        <div class="devices duo">
+          <img class="ph p2" src="assets/img/provolog-timeline.webp" width="540" height="960" alt="ProvoLog note timeline with a GPS chip and a photo marked Content Credentials" loading="lazy">
+          <img class="ph p1" src="assets/img/provolog-projects.webp" width="540" height="960" alt="ProvoLog project list with three colour-coded projects" loading="lazy">
         </div>
       </article>
 
@@ -493,6 +518,8 @@ footer a{text-decoration:none}footer a:hover{color:var(--on);text-decoration:und
     <ul>
       <li><a href="/localcast/">LocalCast</a></li>
       <li><a href="/localcast/privacy.html">LocalCast privacy policy</a></li>
+      <li><a href="/provolog/">ProvoLog</a></li>
+      <li><a href="/provolog/privacy.html">ProvoLog privacy policy</a></li>
       <li><a href="/tax-genie-privacy-policy.html">Tax Genie privacy policy</a></li>
     </ul>
   </div>
