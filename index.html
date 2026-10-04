@@ -162,13 +162,16 @@ h2{font-weight:700;font-size:clamp(34px,4.6vw,60px);line-height:1.04;letter-spac
 .links a:active{border-radius:14px}
 .links a .ms{font-size:18px}
 .proj.half .links{margin-top:auto;padding-top:26px}
-.soon{display:inline-block;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;background:#fff;color:var(--coral);margin-left:6px;vertical-align:1px}
+.links a.gp{--acc:var(--coral);background:#fff;color:var(--acc);border:1.5px solid color-mix(in srgb,var(--acc) 35%,transparent);padding:9px 18px 9px 12px;font-size:14px;transition:background .2s,color .2s,border-color .2s,border-radius .25s var(--spring),transform .25s var(--spring),box-shadow .2s}
+.links a.gp .ms{font-size:20px}
+.links a.gp:hover{background:var(--acc);color:#fff;border-color:var(--acc);box-shadow:0 6px 16px -8px var(--acc)}
+.links a.gp:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.proj.blue .gp{--acc:var(--blue)}.proj.green .gp{--acc:var(--green)}.proj.yellow .gp{--acc:#7a5900}
 .devices{position:relative;aspect-ratio:1.18;max-width:520px;width:100%;justify-self:center}
 .devices .tv{position:absolute;left:0;top:6%;width:84%;border-radius:18px;border:6px solid #14161a;box-shadow:0 30px 50px -24px rgba(0,0,0,.45)}
 .devices .ph{position:absolute;right:0;bottom:0;width:30%;border-radius:20px;border:4px solid #14161a;box-shadow:0 26px 40px -18px rgba(0,0,0,.5);transition:transform .6s var(--spring)}
 .proj:hover .devices .ph{transform:translateY(-8px) rotate(-2deg)}
 .proj.big.blue{background:var(--blue-c);color:var(--blue-on)}
-.proj.blue .soon{color:var(--blue)}
 .proj.blue .ico{color:#fff}
 .devices.duo{aspect-ratio:1.18}
 .devices.duo .ph{width:38%}
@@ -328,10 +331,10 @@ footer a{text-decoration:none}footer a:hover{color:var(--on);text-decoration:und
         <div>
           <span class="ico"><svg viewBox="0 0 100 100" style="color:var(--coral)"><use href="#s-cookie"/></svg><span class="ms">tv</span></span>
           <h3>LocalCast</h3>
-          <p class="plat">Android &amp; Android TV · <a href="https://play.google.com/store/apps/details?id=prathieshna.localcast.app" target="_blank" rel="noopener" style="color:inherit;font-weight:600">Google Play</a></p>
+          <p class="plat">Android &amp; Android TV</p>
           <p class="d">Turns any TV into a sign from your phone. Push slides, run a countdown timer, read from a teleprompter or call queue numbers, all over the local Wi-Fi. Content is encrypted between the phone and the TV, and there is no cloud and no account to create.</p>
           <ul class="tags"><li>Kotlin</li><li>Compose for TV</li><li>Ktor</li><li>SRP-6a · AES-GCM</li><li>Play Billing</li></ul>
-          <div class="links"><a href="/localcast/">Visit the site<span class="ms">arrow_outward</span></a><a href="/localcast/privacy.html">Privacy policy</a></div>
+          <div class="links"><a class="gp" href="https://play.google.com/store/apps/details?id=prathieshna.localcast.app" target="_blank" rel="noopener"><span class="ms">play_arrow</span>Google Play</a><a href="/localcast/">Visit the site<span class="ms">arrow_outward</span></a><a href="/localcast/privacy.html">Privacy policy</a></div>
         </div>
         <div class="devices">
           <img class="tv" src="assets/img/localcast-tv.webp" width="960" height="540" alt="LocalCast now-serving queue board on a TV" loading="lazy">
@@ -344,10 +347,10 @@ footer a{text-decoration:none}footer a:hover{color:var(--on);text-decoration:und
         <div>
           <span class="ico"><svg viewBox="0 0 100 100" style="color:var(--blue)"><use href="#s-flower"/></svg><span class="ms">shield</span></span>
           <h3>ProvoLog</h3>
-          <p class="plat">Android · <a href="https://play.google.com/store/apps/details?id=com.prathieshna.provolog" target="_blank" rel="noopener" style="color:inherit;font-weight:600">Google Play</a></p>
+          <p class="plat">Android</p>
           <p class="d">Private field notes with photos, voice and GPS. Everything is encrypted on the phone, voice notes are transcribed on-device, and photos can be signed with Content Credentials so later edits show. No account, no cloud, no server.</p>
           <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>Room + SQLCipher</li><li>C2PA</li><li>On-device ML</li><li>Play Billing</li></ul>
-          <div class="links"><a href="/provolog/">Visit the site<span class="ms">arrow_outward</span></a><a href="/provolog/privacy.html">Privacy policy</a></div>
+          <div class="links"><a class="gp" href="https://play.google.com/store/apps/details?id=com.prathieshna.provolog" target="_blank" rel="noopener"><span class="ms">play_arrow</span>Google Play</a><a href="/provolog/">Visit the site<span class="ms">arrow_outward</span></a><a href="/provolog/privacy.html">Privacy policy</a></div>
         </div>
         <div class="devices duo">
           <img class="ph p2" src="assets/img/provolog-timeline.webp" width="540" height="960" alt="ProvoLog note timeline with a GPS chip and a photo marked Content Credentials" loading="lazy">
@@ -359,10 +362,10 @@ footer a{text-decoration:none}footer a:hover{color:var(--on);text-decoration:und
         <svg class="bgshape" viewBox="0 0 100 100" aria-hidden="true"><use href="#s-cookie"/></svg>
         <span class="ico"><svg viewBox="0 0 100 100" style="color:var(--green)"><use href="#s-squircle"/></svg><span class="ms">menu_book</span></span>
         <h3>Book Finder</h3>
-        <p class="plat">Android · Google Play</p>
+        <p class="plat">Android</p>
         <p class="d">Searches millions of books through the Google Books and Open Library APIs. Covers, ratings, community reading stats and publisher details in a single, fast app.</p>
         <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>REST APIs</li><li>AdMob</li></ul>
-        <div class="links"><a href="https://play.google.com/store/apps/details?id=lk.prathieshna.bookfinder" target="_blank" rel="noopener"><span class="ms">play_arrow</span>Google Play</a></div>
+        <div class="links"><a class="gp" href="https://play.google.com/store/apps/details?id=lk.prathieshna.bookfinder" target="_blank" rel="noopener"><span class="ms">play_arrow</span>Google Play</a></div>
       </article>
 
       <article class="proj half yellow rv" style="--d:.1s">
@@ -370,9 +373,9 @@ footer a{text-decoration:none}footer a:hover{color:var(--on);text-decoration:und
         <span class="ico"><svg viewBox="0 0 100 100" style="color:#b06b00"><use href="#s-burst"/></svg><span class="ms">calculate</span></span>
         <h3>Tax Genie</h3>
         <p class="plat">Android · Sri Lanka</p>
-        <p class="d">A step-by-step estimator for Sri Lankan personal income tax. Plain-English questions lead to a line-by-line breakdown across every tax regime from 2018 to 2025/26, including residency relief and deductions.</p>
+        <p class="d">A step-by-step estimator for Sri Lankan personal income tax. Plain-English questions lead to a line-by-line breakdown for every Year of Assessment from 2018/19 to 2026/27, including residency relief and deductions.</p>
         <ul class="tags"><li>Kotlin</li><li>Jetpack Compose</li><li>MVVM</li><li>Hilt</li><li>AdMob</li></ul>
-        <div class="links"><a href="https://play.google.com/store/apps/details?id=lk.prathieshna.taxgenie" target="_blank" rel="noopener"><span class="ms">play_arrow</span>Google Play</a><a href="/tax-genie-privacy-policy.html">Privacy policy</a></div>
+        <div class="links"><a class="gp" href="https://play.google.com/store/apps/details?id=lk.prathieshna.taxgenie" target="_blank" rel="noopener"><span class="ms">play_arrow</span>Google Play</a><a href="/taxgenie/">Visit the site<span class="ms">arrow_outward</span></a><a href="/taxgenie/privacy.html">Privacy policy</a></div>
       </article>
 
     </div>
@@ -520,7 +523,8 @@ footer a{text-decoration:none}footer a:hover{color:var(--on);text-decoration:und
       <li><a href="/localcast/privacy.html">LocalCast privacy policy</a></li>
       <li><a href="/provolog/">ProvoLog</a></li>
       <li><a href="/provolog/privacy.html">ProvoLog privacy policy</a></li>
-      <li><a href="/tax-genie-privacy-policy.html">Tax Genie privacy policy</a></li>
+      <li><a href="/taxgenie/">Tax Genie</a></li>
+      <li><a href="/taxgenie/privacy.html">Tax Genie privacy policy</a></li>
     </ul>
   </div>
 </footer>

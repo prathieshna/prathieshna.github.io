@@ -27,7 +27,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preload" as="image" href="assets/timeline-540.webp" type="image/webp" fetchpriority="high">
 <link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=ads_click,arrow_back,arrow_outward,check,close,cloud_off,description,expand_more,fingerprint,folder_zip,image_search,key,location_on,lock,mail,map,mic,no_accounts,password,phone_android,picture_as_pdf,search,shield,text_fields,timeline,verified,visibility_off,warning,wifi_off,workspace_premium&display=block" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=ads_click,arrow_back,arrow_outward,check,close,cloud_off,description,expand_more,fingerprint,folder_zip,image_search,key,location_on,lock,mail,map,mic,no_accounts,password,phone_android,picture_as_pdf,play_arrow,search,shield,text_fields,timeline,verified,visibility_off,warning,wifi_off,workspace_premium&display=block" rel="stylesheet">
 <script>document.documentElement.classList.add('js')</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"ProvoLog","installUrl":"https://play.google.com/store/apps/details?id=com.prathieshna.provolog","alternateName":"ProvoLog: Private Field Notes","applicationCategory":"ProductivityApplication","operatingSystem":"Android","description":"Encrypted, offline-first field notes with photos, voice and GPS. Photos can be signed on the device with Content Credentials (C2PA). No account required.","url":"https://prathieshna.github.io/provolog/","image":"https://prathieshna.github.io/provolog/assets/og.png","screenshot":["https://prathieshna.github.io/provolog/assets/timeline-1080.webp","https://prathieshna.github.io/provolog/assets/content-credentials-1080.webp","https://prathieshna.github.io/provolog/assets/map-1080.webp"],"author":{"@type":"Person","name":"Prathieshna Vekneswaran","url":"https://prathieshna.github.io/"},"offers":[{"@type":"Offer","name":"ProvoLog Free","price":"0","priceCurrency":"USD"},{"@type":"Offer","name":"ProvoLog Pro (one-time in-app purchase)","price":"2.49","priceCurrency":"USD"}]}
@@ -84,8 +84,11 @@ header.top .wrap{display:flex;align-items:center;justify-content:space-between;h
 nav ul{display:flex;gap:2px;list-style:none;align-items:center}
 nav a.l{display:block;text-decoration:none;color:var(--on-surface-variant);font-size:15px;font-weight:500;padding:9px 14px;border-radius:999px;transition:background .2s,color .2s}
 nav a.l:hover{background:var(--sc-high);color:var(--on-surface)}
-.pill-soon{display:inline-flex;align-items:center;gap:8px;font-size:14px;font-weight:500;padding:9px 16px;border-radius:999px;background:var(--sc-high);color:var(--on-surface-variant);border:1px solid var(--outline-variant);cursor:default;white-space:nowrap}
-.pill-soon b{font-weight:600;color:var(--tertiary)}
+.pill-soon{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;padding:9px 16px 9px 12px;border-radius:999px;background:var(--sc-high);color:var(--on-surface-variant);border:1px solid var(--outline-variant);cursor:pointer;white-space:nowrap;text-decoration:none;transition:background .2s,border-color .2s,box-shadow .2s,border-radius .3s var(--emph)}
+.pill-soon .ms{font-size:20px;color:var(--primary)}
+.pill-soon b{font-weight:600;color:var(--primary)}
+.pill-soon:hover{background:var(--primary-container);border-color:var(--primary);box-shadow:0 2px 8px rgba(0,0,0,.18)}
+.pill-soon:active{border-radius:12px}
 @media(max-width:860px){nav li.opt{display:none}}
 @media(max-width:420px){.pill-soon .full{display:none}}
 
@@ -250,7 +253,7 @@ footer .brand{font-size:18px}
         <li class="opt"><a class="l" href="#privacy">Privacy</a></li>
         <li class="opt"><a class="l" href="#pro">Pro</a></li>
         <li class="opt"><a class="l" href="#faq">FAQ</a></li>
-        <li><a class="pill-soon" href="https://play.google.com/store/apps/details?id=com.prathieshna.provolog" rel="noopener"><span class="full">Get it on </span><b>Google Play</b></a></li>
+        <li><a class="pill-soon" href="https://play.google.com/store/apps/details?id=com.prathieshna.provolog" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">play_arrow</span><span class="full">Get it on </span><b>Google Play</b></a></li>
       </ul>
     </nav>
   </div>
@@ -265,7 +268,7 @@ footer .brand{font-size:18px}
       <h1 id="h-hero" class="rv" style="--d:.05s">Field notes you can <span>stand behind.</span></h1>
       <p class="lead rv" style="--d:.1s">Private, encrypted, offline-first notes with photos, voice and GPS. Photos are signed on your phone so any later edit can be detected. No account, no cloud, no server.</p>
       <div class="cta rv" style="--d:.15s">
-        <a class="btn fill" href="https://play.google.com/store/apps/details?id=com.prathieshna.provolog" rel="noopener"><span class="ms" aria-hidden="true">phone_android</span>Get it on Google Play</a>
+        <a class="btn fill" href="https://play.google.com/store/apps/details?id=com.prathieshna.provolog" target="_blank" rel="noopener"><span class="ms" aria-hidden="true">play_arrow</span>Get it on Google Play</a>
         <a class="btn tonal" href="#features">See how it works</a>
       </div>
       <ul class="chips rv" style="--d:.2s" aria-label="Highlights">

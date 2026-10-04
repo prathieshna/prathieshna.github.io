@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — Tax Genie</title>
+<meta name="description" content="Privacy policy for the Tax Genie Android app: what is and is not collected, how Google AdMob ads work, and your choices and rights.">
+<link rel="canonical" href="https://prathieshna.github.io/taxgenie/privacy.html">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F4F7FE" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A1428" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=arrow_back&display=block" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light dark;
+  --primary:#1558D6; --on-primary:#FFFFFF; --primary-container:#DCE8FF; --on-primary-container:#0A2A6B;
+  --secondary:#0A2A6B; --on-secondary:#FFFFFF; --secondary-container:#D5E0F7; --on-secondary-container:#0A1F4F;
+  --tertiary:#7A5900; --tertiary-container:#FFC72C; --on-tertiary-container:#0A2A6B;
+  --amber:#FFC72C; --navy:#0A2A6B;
+  --surface:#F4F7FE; --on-surface:#0F1B33; --on-surface-variant:#43506B; --surface-variant:#DDE5F7;
+  --outline:#6F7B95; --outline-variant:#C5CFE6;
+  --sc-low:#EDF2FC; --sc:#E6ECF9; --sc-high:#DDE5F7;
+  --bezel:#12141A; --shadow:0 22px 44px -18px rgba(10,42,107,.45);
+  --glance-a:#0D3A93; --glance-b:#1E6FEA;
+  --font:"Google Sans Flex","Google Sans",Roboto,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gutter:clamp(16px,4vw,48px);
+  --emph:cubic-bezier(.2,0,0,1);
+  --spring:cubic-bezier(.34,1.45,.5,1);
+  --r-s:8px; --r-m:12px; --r-l:16px; --r-xl:24px; --r-xxl:28px;
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){
+  --primary:#A8C4FF; --on-primary:#00296B; --primary-container:#123F9A; --on-primary-container:#DCE8FF;
+  --secondary:#B9C7EA; --on-secondary:#0A1F4F; --secondary-container:#26365C; --on-secondary-container:#DCE4FA;
+  --tertiary:#FFC72C; --tertiary-container:#5C4500; --on-tertiary-container:#FFE08A;
+  --surface:#0A1428; --on-surface:#E3E9F7; --on-surface-variant:#B5C0D9; --surface-variant:#26365C;
+  --outline:#8390AD; --outline-variant:#2E3F63;
+  --sc-low:#0F1C36; --sc:#14233F; --sc-high:#1C2D4D;
+  --bezel:#3A4256; --shadow:0 22px 44px -18px rgba(0,0,0,.75);
+  --glance-a:#0B2F7A; --glance-b:#1558D6;
+}}
+:root[data-theme=dark]{
+  --primary:#A8C4FF; --on-primary:#00296B; --primary-container:#123F9A; --on-primary-container:#DCE8FF;
+  --secondary:#B9C7EA; --on-secondary:#0A1F4F; --secondary-container:#26365C; --on-secondary-container:#DCE4FA;
+  --tertiary:#FFC72C; --tertiary-container:#5C4500; --on-tertiary-container:#FFE08A;
+  --surface:#0A1428; --on-surface:#E3E9F7; --on-surface-variant:#B5C0D9; --surface-variant:#26365C;
+  --outline:#8390AD; --outline-variant:#2E3F63;
+  --sc-low:#0F1C36; --sc:#14233F; --sc-high:#1C2D4D;
+  --bezel:#3A4256; --shadow:0 22px 44px -18px rgba(0,0,0,.75);
+  --glance-a:#0B2F7A; --glance-b:#1558D6;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{background:var(--surface);color:var(--on-surface);scroll-behavior:smooth;scroll-padding-top:84px;-webkit-text-size-adjust:100%}
+body{font-family:var(--font);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden;background:var(--surface)}
+a{color:var(--primary)}
+:focus-visible{outline:3px solid var(--primary);outline-offset:3px;border-radius:var(--r-s)}
+.ms{font-family:"Material Symbols Outlined";font-weight:400;font-style:normal;font-size:20px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;width:1em;overflow:hidden;white-space:nowrap;direction:ltr;font-feature-settings:"liga";-webkit-font-feature-settings:"liga";user-select:none;flex:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--gutter)}
+header.top{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--surface) 86%,transparent);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--outline-variant)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:12px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--on-surface);font-weight:600;font-size:20px;letter-spacing:-.01em}
+.brand img{width:36px;height:36px;border-radius:10px}
+.back{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:15px;text-decoration:none;padding:9px 18px 9px 12px;border-radius:999px;background:var(--secondary-container);color:var(--on-secondary-container);transition:border-radius .3s var(--spring),box-shadow .2s}
+.back:hover{box-shadow:0 2px 8px -2px rgba(10,42,107,.4)}
+.back:active{border-radius:12px}
+.doc{max-width:760px;margin:0 auto;padding:clamp(32px,5vw,56px) var(--gutter) 96px}
+.doc-head{margin-bottom:32px}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--on-primary-container);background:var(--primary-container);padding:4px 12px;border-radius:999px;margin-bottom:14px}
+.doc h1{font-size:clamp(30px,5vw,44px);line-height:1.1;margin:0 0 12px;letter-spacing:-.025em;font-weight:600}
+.meta{color:var(--on-surface-variant);font-size:15px;margin:0 0 4px}
+.meta strong{color:var(--on-surface)}
+.summary-box{background:var(--sc-low);border:1px solid var(--outline-variant);border-left:4px solid var(--primary);border-radius:var(--r-l);padding:20px 22px;margin:28px 0 36px}
+.doc .summary-box h2{margin:0 0 10px;font-size:15px;text-transform:uppercase;letter-spacing:.04em;color:var(--primary);border:0;padding:0}
+.summary-box ul{margin:0;padding-left:20px}
+.summary-box li{margin-bottom:6px}
+nav.toc{background:var(--sc-low);border:1px solid var(--outline-variant);border-radius:var(--r-l);padding:16px 22px;margin-bottom:40px;font-size:15px}
+nav.toc p{margin:0 0 8px;font-weight:600;color:var(--on-surface-variant);text-transform:uppercase;font-size:12.5px;letter-spacing:.05em}
+nav.toc ol{margin:0;padding-left:0;list-style:none;columns:2;column-gap:24px}
+nav.toc li{margin-bottom:4px}
+nav.toc a{color:var(--on-surface);text-decoration:none}
+nav.toc a:hover{color:var(--primary);text-decoration:underline}
+.doc section{margin-bottom:36px}
+.doc h2{font-size:clamp(20px,2.4vw,24px);letter-spacing:-.015em;font-weight:600;border-top:1px solid var(--outline-variant);padding-top:28px;margin:0 0 14px}
+.doc h3{font-size:17px;margin:20px 0 8px;font-weight:600}
+.doc p{margin:0 0 14px}
+.doc ul,.doc ol{padding-left:22px;margin:0 0 14px}
+.doc li{margin-bottom:6px}
+.doc code{background:var(--primary-container);color:var(--on-primary-container);padding:1px 6px;border-radius:4px;font-size:.9em}
+.doc table{width:100%;border-collapse:collapse;margin:12px 0 18px;font-size:15px}
+.doc th,.doc td{text-align:left;padding:9px 10px;border-bottom:1px solid var(--outline-variant);vertical-align:top}
+.doc th{color:var(--on-surface-variant);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.03em}
+.note{background:var(--tertiary-container);color:var(--on-tertiary-container);border-radius:var(--r-l);padding:14px 18px;font-size:15px;margin:14px 0}
+.note strong{display:block;margin-bottom:4px}
+.note a{color:inherit}
+.doc footer{border-top:1px solid var(--outline-variant);padding-top:24px;color:var(--on-surface-variant);font-size:14px}
+footer.site{background:var(--sc);padding:32px 0 40px}
+footer.site .wrap{display:flex;flex-wrap:wrap;gap:16px 40px;justify-content:space-between;align-items:center}
+footer.site ul{list-style:none;display:flex;flex-wrap:wrap;gap:6px 24px}
+footer.site a{color:var(--on-surface);font-weight:500;font-size:15px}
+footer.site .brand img{width:30px;height:30px;border-radius:8px}
+footer.site .brand{font-size:18px}
+footer.site p{width:100%;font-size:13.5px;color:var(--on-surface-variant)}
+@media(max-width:520px){nav.toc ol{columns:1}.back .t{display:none}.back{padding:9px 14px 9px 12px}}
+@media print{header.top{position:static}footer.site{display:none}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.01ms!important}}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./" aria-label="Tax Genie home"><img src="assets/icon-192.webp" width="36" height="36" alt="">Tax Genie</a>
+    <a class="back" href="./"><span class="ms" aria-hidden="true">arrow_back</span><span><span class="t">Back to </span>Tax Genie</span></a>
+  </div>
+</header>
+
+<main class="doc" id="main">
+
+  <header class="doc-head">
+    <span class="eyebrow">Privacy Policy</span>
+    <h1>Tax Genie</h1>
+    <p class="meta"><strong>Effective &amp; last updated:</strong> June 28, 2026</p>
+    <p class="meta"><strong>Developer:</strong> Prathieshna Vekneswaran, an individual developer based in Sri Lanka</p>
+    <p class="meta"><strong>Contact:</strong> <a href="mailto:prathieshnav@gmail.com">prathieshnav@gmail.com</a></p>
+  </header>
+
+  <div class="summary-box">
+    <h2>In plain language</h2>
+    <ul>
+      <li>Tax Genie does the tax calculation entirely on your device. We don't ask you to create an account, and we don't collect your name, email, or financial figures on any server we run.</li>
+      <li>We show ads through Google AdMob. To do that, Google's SDK collects some technical data (like an advertising identifier) on its own — we don't add any tracking, analytics, or remarketing on top of that.</li>
+      <li>We don't sell your information, and we don't run marketing or remarketing campaigns of our own.</li>
+      <li>If you're in California or the EU/UK, see the dedicated sections below for your specific rights and how to use them.</li>
+    </ul>
+  </div>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p>Contents</p>
+    <ol>
+      <li><a href="#scope">1. Scope of this policy</a></li>
+      <li><a href="#not-collect">2. Information we do not collect</a></li>
+      <li><a href="#ads">3. Information collected for advertising (Google AdMob)</a></li>
+      <li><a href="#use">4. How that information is used</a></li>
+      <li><a href="#sharing">5. Sharing, sale, and remarketing</a></li>
+      <li><a href="#retention">6. Data retention &amp; security</a></li>
+      <li><a href="#choices">7. Your choices &amp; how to opt out</a></li>
+      <li><a href="#children">8. Children's privacy</a></li>
+      <li><a href="#california">9. California privacy rights (CalOPPA, CCPA/CPRA)</a></li>
+      <li><a href="#eu">10. EU/UK/EEA privacy rights (GDPR)</a></li>
+      <li><a href="#dnt">11. "Do Not Track" signals</a></li>
+      <li><a href="#changes">12. Changes to this policy</a></li>
+      <li><a href="#contact">13. Contact us</a></li>
+    </ol>
+  </nav>
+
+  <section id="scope">
+    <h2>1. Scope of this policy</h2>
+    <p>This policy covers the Tax Genie Android application ("the App"), developed and published by an individual developer ("we," "us"). The App is a personal income tax estimator for Sri Lanka: it asks you questions about your income and shows you a calculated tax breakdown. It does not file anything on your behalf, does not connect to any government system, and does not require you to register or log in.</p>
+    <p>We don't sell any product or service through the App, and the App itself has no in-app purchases, subscriptions, or paid tiers — it is supported entirely by advertising.</p>
+  </section>
+
+  <section id="not-collect">
+    <h2>2. Information we do not collect</h2>
+    <p>We want to be specific about this rather than vague, since "we respect your privacy" on its own doesn't mean much. We do <strong>not</strong>:</p>
+    <ul>
+      <li>Require or offer account creation, sign-in, or any form of user profile.</li>
+      <li>Collect your name, email address, phone number, National Identity Card number, Tax Identification Number, or any of the income figures you enter into the calculator.</li>
+      <li>Operate any backend server that the App sends your answers to. All calculations run locally, on your device.</li>
+      <li>Use any analytics SDK (e.g. Firebase Analytics, Mixpanel) beyond what is described in Section 3.</li>
+      <li>Use cookies, pixels, or remarketing tags of our own.</li>
+    </ul>
+    <p>The App does store your last few calculations <em>locally on your own device</em> (so you can glance back at them), using Android's on-device storage. That data is never transmitted to us and is deleted automatically if you clear the App's data or use the in-app "Clear history" option.</p>
+  </section>
+
+  <section id="ads">
+    <h2>3. Information collected for advertising (Google AdMob)</h2>
+    <p>The App displays ads using <strong>Google AdMob</strong> (part of Google Ads). To select, deliver, and measure ads, Google's AdMob SDK — running inside the App — may automatically collect and process information such as:</p>
+    <table>
+      <tr><th>Category</th><th>Examples</th></tr>
+      <tr><td>Device &amp; advertising identifiers</td><td>Android Advertising ID (GAID), device model, operating system version</td></tr>
+      <tr><td>Network information</td><td>IP address, general (city/region-level) location inferred from it, mobile carrier</td></tr>
+      <tr><td>App interaction data</td><td>Ad impressions, clicks, and basic in-app events used for ad delivery and frequency capping</td></tr>
+    </table>
+    <p>This collection is performed by Google, under <strong>Google's own privacy policy</strong> (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>) and its <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">policy for publishers and advertisers</a> — not ours. We do not receive your individual advertising ID, IP address, or any user-level ad data; we only see aggregated, anonymized reporting (e.g. "X ad impressions this month, estimated revenue Y").</p>
+  </section>
+
+  <section id="use">
+    <h2>4. How that information is used</h2>
+    <p>The only use of the data described in Section 3 is to serve and measure advertising inside the App, and to detect invalid traffic/fraud. We do not use it, and have not configured AdMob to use it, for:</p>
+    <ul>
+      <li>Remarketing or retargeting you on other apps or websites,</li>
+      <li>Building a profile of you across other apps,</li>
+      <li>Email, SMS, or push marketing of any kind, or</li>
+      <li>Selling access to your data to any party.</li>
+    </ul>
+  </section>
+
+  <section id="sharing">
+    <h2>5. Sharing, sale, and remarketing</h2>
+    <p>We do not sell your personal information for money to anyone. The only party your device communicates with for advertising purposes is Google, as the operator of the AdMob network embedded in the App — this is inherent to how mobile ad-serving works, not an additional disclosure we make on top of it.</p>
+    <div class="note">
+      <strong>Personalized ads and "sharing" under privacy law</strong>
+      Depending on where you live, allowing Google's advertising SDK to process an advertising identifier for personalized ads may be classified in law as "sharing" personal information for cross-context behavioral advertising — even though no payment is involved and we do not have access to the identifier ourselves. If you are a California resident, see Section 9 for how to opt out. If you are in the EU, UK, or EEA, see Section 10.
+    </div>
+  </section>
+
+  <section id="retention">
+    <h2>6. Data retention &amp; security</h2>
+    <p>Since we don't operate a server that stores your personal data, there is no central database of user information for us to retain, secure, or be breached. Calculation history lives only in the App's local storage on your device and is governed by your device's own security (lock screen, encryption, etc.) until you delete the App or clear its data. Any network requests the App makes (solely to fetch ads) use standard encrypted HTTPS connections.</p>
+  </section>
+
+  <section id="choices">
+    <h2>7. Your choices &amp; how to opt out</h2>
+    <p>You can limit ad personalization at the device level, independent of any single app:</p>
+    <ul>
+      <li><strong>On Android:</strong> Settings → Privacy (or Google) → Ads → turn off "Personalized ads," or, on Android 12+, delete your advertising ID entirely.</li>
+      <li><strong>Via your Google Account:</strong> visit <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a> to control ad personalization across all apps and Google services.</li>
+      <li><strong>Industry opt-outs:</strong> <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">aboutads.info/choices</a> (US) and <a href="https://www.youronlinechoices.eu" target="_blank" rel="noopener">youronlinechoices.eu</a> (EU) let you opt out of participating ad networks' personalization more broadly.</li>
+    </ul>
+    <p>Turning ad personalization off means you'll still see ads (the App is ad-supported), but they'll be less tailored to you.</p>
+  </section>
+
+  <section id="children">
+    <h2>8. Children's privacy</h2>
+    <p>Tax Genie is a personal income tax tool intended for general audiences, not for children. We do not knowingly direct the App at, or knowingly collect information from, children under 13 (or the relevant age of consent in your country). If you believe a child has provided us information, contact us at the email below and we will address it.</p>
+  </section>
+
+  <section id="california">
+    <h2>9. California privacy rights (CalOPPA, CCPA/CPRA)</h2>
+    <h3>CalOPPA</h3>
+    <ul>
+      <li>The effective date of this policy is stated at the top of the page, and is updated whenever the policy materially changes.</li>
+      <li>The categories of personally identifiable information collected by the App directly are: <strong>none.</strong> See Section 3 for what Google's AdMob SDK collects on its own.</li>
+      <li>Third parties (Google, via AdMob) may collect personally identifiable information while you use the App, as described above.</li>
+      <li>We do not currently process or respond differently to browser/device "Do Not Track" signals — see Section 11.</li>
+    </ul>
+    <h3>CCPA / CPRA</h3>
+    <p>If you are a California resident, you have the right to:</p>
+    <ul>
+      <li><strong>Know</strong> what personal information is collected, used, and disclosed.</li>
+      <li><strong>Delete</strong> personal information collected from you, subject to certain exceptions.</li>
+      <li><strong>Correct</strong> inaccurate personal information.</li>
+      <li><strong>Opt out of "sale" or "sharing"</strong> of personal information.</li>
+      <li><strong>Non-discrimination</strong> for exercising any of these rights.</li>
+    </ul>
+    <p>We do not sell personal information for monetary consideration. As noted in Section 5, Google's processing of advertising identifiers for personalized ads may meet the CCPA/CPRA's broad definition of "sharing" for cross-context behavioral advertising. You can opt out using the device-level and Google Account controls in Section 7. Because we don't hold personal data ourselves, requests to know/delete/correct data that Google has processed should also be directed to Google directly; we'll forward or assist with any request sent to <a href="mailto:prathieshnav@gmail.com">prathieshnav@gmail.com</a> and respond within 45 days as required by the CCPA (extendable by a further 45 days where the law allows).</p>
+  </section>
+
+  <section id="eu">
+    <h2>10. EU/UK/EEA privacy rights (GDPR)</h2>
+    <p>If you're in the EU, UK, or EEA, the General Data Protection Regulation (or UK GDPR) gives you the right to access, correct, delete, restrict, or port your personal data, to object to processing, to withdraw consent at any time, and to lodge a complaint with your local data protection authority.</p>
+    <p>For the App's own (minimal) processing, we act as data controller — but there isn't personal data tied to you for us to act on, since nothing is sent to a server we control. For data processed by Google's AdMob SDK to serve ads, Google acts as an independent data controller under its own privacy policy and is responsible for obtaining any consent required under the EU's ePrivacy and data protection rules before personalizing ads to you. Where applicable, Google's data may be transferred to and processed in countries outside the EU/UK, under safeguards such as the EU Standard Contractual Clauses — see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a> for details.</p>
+    <p>To exercise any of these rights regarding our own processing, contact us at the email below.</p>
+  </section>
+
+  <section id="dnt">
+    <h2>11. "Do Not Track" signals</h2>
+    <p>Some browsers and devices send a "Do Not Track" (DNT) signal. There's no common industry standard for how apps should interpret DNT, so — like most mobile apps — Tax Genie does not currently respond to it differently. The opt-out controls in Section 7 work regardless of any DNT setting.</p>
+  </section>
+
+  <section id="changes">
+    <h2>12. Changes to this policy</h2>
+    <p>If this policy changes, we'll update the "last updated" date at the top and post the revised version at this same address. If a change is significant, we'll also note it inside the App. We'd encourage checking back occasionally rather than assuming nothing has changed.</p>
+  </section>
+
+  <section id="contact">
+    <h2>13. Contact us</h2>
+    <p>For any question about this policy, a request to exercise a privacy right, or anything else related to Tax Genie, email <a href="mailto:prathieshnav@gmail.com">prathieshnav@gmail.com</a>. As this is an individually-developed app, requests are handled personally — we aim to respond within 30 days for general inquiries, and within the statutory timeframe for any formal CCPA or GDPR request.</p>
+  </section>
+
+  <footer>
+    By using Tax Genie, you acknowledge that you have read and understood this Privacy Policy.
+  </footer>
+
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <a class="brand" href="./"><img src="assets/icon-192.webp" width="30" height="30" alt="">Tax Genie</a>
+    <ul aria-label="Footer">
+      <li><a href="./">Tax Genie</a></li>
+      <li><a href="mailto:prathieshnav@gmail.com">Contact</a></li>
+      <li><a href="/">Back to portfolio</a></li>
+    </ul>
+    <p>&copy; 2026 Prathieshna Vekneswaran. Tax Genie is an independent app and is not affiliated with the Inland Revenue Department of Sri Lanka.</p>
+  </div>
+</footer>
+</body>
+</html>
