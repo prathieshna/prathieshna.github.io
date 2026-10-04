@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProvoLog privacy policy</title>
+<meta name="description" content="How ProvoLog handles your data: everything stays on your phone, there is no account, and the network is used in only five cases.">
+<link rel="canonical" href="https://prathieshna.github.io/provolog/privacy.html">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#F9F9FF" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111418" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans+Flex:wght@400..700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme:light dark;
+  --primary:#2E5E8E; --primary-container:#D3E4FF; --on-primary-container:#001C38;
+  --surface:#F9F9FF; --on-surface:#191C20; --on-surface-variant:#43474E; --outline-variant:#C3C6CF;
+  --sc-low:#F3F3FA; --sc:#EDEDF4; --sc-high:#E7E8EE;
+  --font:"Google Sans Flex","Google Sans",Roboto,system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+@media(prefers-color-scheme:dark){:root{
+  --primary:#A3C9FF; --primary-container:#0F4777; --on-primary-container:#D3E4FF;
+  --surface:#111418; --on-surface:#E2E2E9; --on-surface-variant:#C3C6CF; --outline-variant:#43474E;
+  --sc-low:#191C20; --sc:#1D2024; --sc-high:#282A2F;
+}}
+*{box-sizing:border-box}
+html{background:var(--surface);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--surface);color:var(--on-surface);font:17px/1.65 var(--font);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--primary);overflow-wrap:anywhere}
+:focus-visible{outline:3px solid var(--primary);outline-offset:3px;border-radius:8px}
+main{max-width:720px;margin:0 auto;padding:28px 20px 96px}
+.back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;font-size:15px;padding:9px 18px 9px 12px;border-radius:999px;background:var(--primary-container);color:var(--on-primary-container)}
+.back svg{width:20px;height:20px;fill:currentColor}
+h1{font-size:clamp(38px,7vw,56px);line-height:1.05;letter-spacing:-.03em;font-weight:600;margin:32px 0 12px}
+h2{font-size:26px;line-height:1.2;letter-spacing:-.02em;font-weight:600;margin:48px 0 10px}
+p,li{color:var(--on-surface-variant)}
+p{margin:0 0 14px}
+ul,ol{margin:0 0 14px;padding-left:22px}
+li{margin:8px 0}
+li::marker{color:var(--primary)}
+strong{color:var(--on-surface);font-weight:600}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em;background:var(--sc-high);padding:1px 6px;border-radius:6px}
+.meta{background:var(--sc-low);border-radius:20px;padding:18px 22px;margin:0 0 26px;font-size:15.5px}
+.meta p{margin:0 0 4px;color:var(--on-surface-variant)}
+.meta p:last-child{margin:0}
+.lead{font-size:19px;color:var(--on-surface)}
+footer{margin-top:56px;padding-top:24px;border-top:1px solid var(--outline-variant);font-size:15px}
+footer a{font-weight:500}
+</style>
+</head>
+<body>
+<main id="main">
+<a class="back" href="index.html"><svg viewBox="0 -960 960 960" aria-hidden="true"><path d="m313-440 224 224-57 56-320-320 320-320 57 56-224 224h487v80H313Z"/></svg>ProvoLog</a>
+<h1>ProvoLog privacy policy</h1>
+<div class="meta">
+<p><strong>Last updated:</strong> 5 October 2026</p>
+<p><strong>App:</strong> ProvoLog (Android, package <code>com.prathieshna.provolog</code>)</p>
+<p><strong>Developer:</strong> Prathieshna Vekneswaran, Colombo, Sri Lanka. Contact: <a href="mailto:prathieshnav@gmail.com">prathieshnav@gmail.com</a></p>
+</div>
+
+<p class="lead">ProvoLog is a private field-notes app. Your notes, photos, audio, video and locations stay on your phone. We run no servers for the app, there is no account, and we never receive your content. This page explains exactly what the app stores and which network connections it can make.</p>
+
+<h2>What ProvoLog stores on your phone</h2>
+<ul>
+<li>Notes, text entries, photos, audio recordings, videos, tags, project names and settings.</li>
+<li>GPS coordinates and a street address for entries, when you allow location. Location is optional.</li>
+<li>A hash of your app PIN (never the PIN itself), your duress-PIN hash if you set one, and your Pro purchase status.</li>
+<li>Transcripts of voice notes and short descriptions of photos (scene labels and text found in the photo), created on your phone.</li>
+</ul>
+<p>All of this is stored only on your device. The database is encrypted with SQLCipher (AES-256). Photos, audio and video are encrypted with AES-256-GCM. The keys are held in the Android Keystore. App backups are switched off, so ProvoLog data is not copied to Google Drive or to a new phone.</p>
+<p>Exports are different: a PDF or ZIP you create is not encrypted, and it goes where you send it.</p>
+
+<h2>What runs on your phone and never leaves it</h2>
+<ul>
+<li>Voice transcription, using an OpenAI Whisper model that runs on your device.</li>
+<li>Photo analysis (Pro): Google ML Kit image labelling and text recognition, using models bundled in the app. No photo is sent anywhere.</li>
+<li>Summaries and rewrites of your notes (Pro), done by simple on-device text processing.</li>
+<li>Content Credentials (Pro): photos are signed on your device with a key held in the Android Keystore. The signed record travels inside the JPEG file and can include the time, GPS position and your phone&rsquo;s make and model. If you share or export a signed photo, that record goes with it. It does not include your name, account or serial numbers.</li>
+</ul>
+
+<h2>When ProvoLog uses the internet</h2>
+<p>ProvoLog works without a connection for notes, photos, audio, search, signing and export. It connects to the network only in these cases:</p>
+<ol>
+<li><strong>Advertising (free version only).</strong> The free version shows ads through Google AdMob. AdMob and Google may collect your advertising ID, device and app information, approximate location from your IP address, and ad interactions, to show and measure ads. Where the law requires it (for example in the EEA and UK) the app first shows Google&rsquo;s consent form, and you can change your choice later in Settings. Pro users do not load the ads SDK. See Google&rsquo;s policy: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">https://policies.google.com/privacy</a></li>
+<li><strong>Voice model download.</strong> The first time you use transcription, the app downloads the speech model (about 42 MB) once from huggingface.co. The host can see your IP address.</li>
+<li><strong>Map (Pro).</strong> The map loads street-map tiles from OpenStreetMap servers. They receive your IP address and the map area being viewed. They do not receive your note content.</li>
+<li><strong>Street addresses.</strong> To turn GPS coordinates into an address, the app asks Android&rsquo;s geocoder, which is provided by Google. The coordinates are sent to that service. If you deny location, no coordinates are collected or sent.</li>
+<li><strong>Purchases.</strong> Buying Pro goes through Google Play Billing. We receive no payment details. Google confirms the purchase to your device.</li>
+</ol>
+<p>We do not use analytics, crash-reporting or tracking SDKs of our own.</p>
+
+<h2>Permissions</h2>
+<ul>
+<li><strong>Camera:</strong> to take photos and record video.</li>
+<li><strong>Microphone:</strong> to record voice notes.</li>
+<li><strong>Location (precise and approximate):</strong> to stamp entries with a position and show them on the map. Used only while the app is open. Optional.</li>
+<li><strong>Biometrics:</strong> to unlock the app with your fingerprint or face. We never receive biometric data; Android handles it.</li>
+<li><strong>Internet and network state:</strong> for the cases listed above.</li>
+<li><strong>Photos you choose:</strong> when you import a picture, Android&rsquo;s photo picker gives the app only the files you select.</li>
+</ul>
+
+<h2>Security features</h2>
+<p>You can lock the app with biometrics, a device lock or an app PIN, lock individual projects with a passcode, and set a duress PIN. Entering the duress PIN erases all ProvoLog data on the device immediately and permanently. Screenshots and the recent-apps preview are blocked inside the app.</p>
+
+<h2>Your choices and deleting your data</h2>
+<p>All data is on your device, so you control it. Delete notes or projects in the app, use the duress PIN, or uninstall the app to remove everything. We hold no copy and cannot recover deleted data.</p>
+<p>Because we do not receive or store your personal data, there is nothing for us to access, correct or delete on our side. For data that Google collects through ads, billing or the geocoder, use Google&rsquo;s own controls and requests.</p>
+
+<h2>Children</h2>
+<p>ProvoLog is not directed at children under 13, or under the minimum age in your country. We do not knowingly collect personal data from children.</p>
+
+<h2>Does anyone get paid for my data?</h2>
+<p>No. We do not sell or share your content. The only third parties involved are the services listed in &ldquo;When ProvoLog uses the internet&rdquo;.</p>
+
+<h2>Changes</h2>
+<p>If this policy changes, the date at the top changes too. Questions: <a href="mailto:prathieshnav@gmail.com">prathieshnav@gmail.com</a></p>
+
+<footer><a href="index.html">Back to ProvoLog</a> &nbsp;·&nbsp; <a href="/">Portfolio</a></footer>
+</main>
+</body>
+</html>
